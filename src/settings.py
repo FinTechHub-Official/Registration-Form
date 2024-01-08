@@ -29,7 +29,11 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv("DEBUG") == 'True')
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(",")
+=======
+ALLOWED_HOSTS = ['*'] if DEBUG else os.getenv("ALLOWED_HOSTS").split(",")
+>>>>>>> 38ac1d8 (Bug fixed)
 
 
 # Application definition
@@ -44,7 +48,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'blog',
+<<<<<<< HEAD
     'import_export'
+=======
+>>>>>>> 38ac1d8 (Bug fixed)
 ]
 
 MIDDLEWARE = [
@@ -114,7 +121,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+<<<<<<< HEAD
 TIME_ZONE = 'Asia/Tashkent'
+=======
+TIME_ZONE = 'UTC'
+>>>>>>> 38ac1d8 (Bug fixed)
 
 USE_I18N = True
 
@@ -138,8 +149,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS
 if not DEBUG:
+<<<<<<< HEAD
     CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS").split(",")
     CSRF_TRUSTED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS").split(",")
+=======
+    CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS').split(",")
+    CSRF_TRUSTED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS').split(",")
+>>>>>>> 38ac1d8 (Bug fixed)
 
     CORS_ALLOW_METHODS = (
         "DELETE",
@@ -156,4 +172,8 @@ if not DEBUG:
         "user-agent",
         "x-csrftoken",
         "x-requested-with",
+<<<<<<< HEAD
     )
+=======
+    )
+>>>>>>> 38ac1d8 (Bug fixed)
