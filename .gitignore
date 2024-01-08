@@ -1,6 +1,6 @@
 Pipfile
 Pipfile.lock
-
+*.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -163,3 +163,4 @@ cython_debug/
 #.idea/
 
 migrations/*
+migrations/
