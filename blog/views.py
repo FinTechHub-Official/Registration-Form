@@ -1,24 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Registration, Banner
-<<<<<<< HEAD
-from rest_framework import status
-
-
-class RegistrationListCreateAPIView(APIView):
-
-    def post(self, request):
-        data = request.data
-        ism = data.get('ism')
-        familiya = data.get('familiya')
-        phone = data.get('phone')
-        kurs = data.get('kurs')
-        note = data.get('note')
-        if ism and familiya and phone and kurs:
-            Registration.objects.create(ism=ism, familiya=familiya, phone=phone, kurs=kurs, note=note)
-            return Response({'message': 'Ro`yxatdan muvofiqiyatli o`tildi'}, status=status.HTTP_201_CREATED)
-        return Response({'error': 'Ma`lumot to`liq emas'}, status=status.HTTP_400_BAD_REQUEST)
-=======
 from .serializers import RegistrationSerializer
 from rest_framework.generics import CreateAPIView
 
@@ -26,7 +8,6 @@ from rest_framework.generics import CreateAPIView
 class RegistrationListCreateAPIView(CreateAPIView):
     queryset = Registration.objects.all()
     serializer_class = RegistrationSerializer
->>>>>>> 38ac1d8 (Bug fixed)
 
 
 class BannerListCreateAPIView(APIView):
