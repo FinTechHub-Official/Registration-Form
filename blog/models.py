@@ -26,6 +26,7 @@ class Registration(models.Model):
     ism = models.CharField(max_length=100)
     familiya = models.CharField(max_length=100)
     phone = models.CharField(max_length=13)
+    phone_2 = models.CharField(max_length=13, blank=True, null=True)
     kurs = models.CharField(max_length=8, choices=Kurslar)
     note = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)

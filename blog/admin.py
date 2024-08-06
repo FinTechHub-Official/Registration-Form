@@ -3,13 +3,15 @@ from .models import Registration, Banner, Target
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 
+
 class RegistrationResource(resources.ModelResource):
     class Meta:
         model = Registration
-        fields = ("phone", "ism", "familiya", "kurs", "created_at", "updated_at",)
+        fields = ("phone", 'phone_2', "ism", "familiya", "kurs", "created_at", "updated_at",)
 
 
 admin.site.register(Banner)
+
 
 @admin.register(Registration)
 class RegistrationAdmin(ImportExportModelAdmin, admin.ModelAdmin):
