@@ -16,7 +16,7 @@ admin.site.register(Banner)
 @admin.register(Registration)
 class RegistrationAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = RegistrationResource
-    list_display = ("id", "phone", "ism", "familiya", "kurs", "note", "created_at", "updated_at")
+    list_display = ("id", "phone", 'phone_2', "ism", "familiya", "kurs", "note", "created_at", "updated_at")
 
 
 @admin.register(Target)
