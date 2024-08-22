@@ -7,7 +7,7 @@ from import_export import resources
 class RegistrationResource(resources.ModelResource):
     class Meta:
         model = Registration
-        fields = ("phone", 'phone_2', "ism", "familiya", "kurs", "created_at", "updated_at",)
+        fields = ("phone", 'phone_2', "ism", "familiya", "kurs", "created_at", "updated_at", 'desc')
 
 
 admin.site.register(Banner)
@@ -16,7 +16,7 @@ admin.site.register(Banner)
 @admin.register(Registration)
 class RegistrationAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = RegistrationResource
-    list_display = ("id", "phone", 'phone_2', "ism", "familiya", "kurs", "note", "created_at", "updated_at")
+    list_display = ("id", "phone", 'phone_2', "ism", "familiya", "kurs", "note", "created_at", "updated_at", 'desc')
 
 
 @admin.register(Target)

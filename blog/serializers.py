@@ -5,7 +5,7 @@ from .models import Registration
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Registration
-        fields = ('ism', 'familiya', 'phone', 'phone_2', 'kurs', 'target')
+        fields = ('ism', 'familiya', 'phone', 'phone_2', 'kurs', 'target', 'desc')
 
     def to_representation(self, instance):
         return {

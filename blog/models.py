@@ -31,6 +31,7 @@ class Registration(models.Model):
     note = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
+    desc = models.TextField(blank=True, null=True)
     
     target = models.ForeignKey(Target, on_delete=models.SET_NULL, null=True, blank=True, related_name='target_lid')
 
